@@ -125,8 +125,14 @@ export default function HomePage() {
           animation: marquee-scroll 30s linear infinite;
         }
         .tech-carousel-mask {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+        @media (min-width: 768px) {
+          .tech-carousel-mask {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          }
         }
       `}</style>
       {/* Navbar */}
@@ -244,70 +250,73 @@ export default function HomePage() {
       {/* About */}
       <section
         id="about"
-        className="py-16 md:py-20 bg-muted scroll-mt-20"
+        className="py-12 md:py-20 bg-muted scroll-mt-20"
       >
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid gap-12 md:grid-cols-2 md:gap-12 items-center">
-            <div>
+          <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-12 md:items-center">
+            {/* Foto em primeiro no mobile (flex-col), à direita no desktop (grid) */}
+            <div className="relative group flex justify-center w-full min-w-0 md:order-1">
+              <div className="w-full max-w-[260px] sm:max-w-[300px] md:max-w-none">
+                <div className="absolute -inset-1 bg-linear-to-r from-emerald-500 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+                <div className="relative bg-card rounded-2xl border border-border p-1.5 sm:p-2">
+                  <div className="aspect-square w-full bg-muted rounded-xl overflow-hidden relative min-h-[220px] sm:min-h-[260px] md:min-h-0">
+                    <Image
+                      src={personal.image}
+                      alt={personal.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover object-top"
+                      sizes="(max-width: 640px) 260px, (max-width: 768px) 300px, 50vw"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="md:order-0">
               <SectionTitle subtitle={t('about.subtitle')}>
                 {t('about.title')}
               </SectionTitle>
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
-                <p>{t('about.paragraph1')}</p>
-                <p>{t('about.paragraph2')}</p>
-                <div className="pt-4 md:pt-6">
-                  <h3 className="text-foreground font-semibold mb-3 md:mb-4 flex items-center gap-2 text-sm md:text-base">
-                    <Code2 size={20} className="text-emerald-600 dark:text-emerald-400 shrink-0" />{' '}
+              <div className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
+                <p className="text-pretty">{t('about.paragraph1')}</p>
+                <p className="text-pretty">{t('about.paragraph2')}</p>
+                <div className="pt-3 md:pt-6">
+                  <h3 className="text-foreground font-semibold mb-2 md:mb-4 flex items-center gap-2 text-sm md:text-base">
+                    <Code2 size={18} className="text-emerald-600 dark:text-emerald-400 shrink-0 md:w-5 md:h-5" />{' '}
                     {t('about.techRecent')}
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
                     {skills.map((skill, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-muted text-emerald-600 dark:text-emerald-400 text-xs md:text-sm rounded-full border border-border"
+                        className="px-2.5 py-0.5 md:px-3 md:py-1 bg-muted text-emerald-600 dark:text-emerald-400 text-[11px] md:text-sm rounded-full border border-border"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
 
-                  <div className="w-full overflow-hidden tech-carousel-mask select-none bg-card p-4 rounded-xl border border-border mt-4 md:mt-6">
-                    <div className="flex w-max animate-marquee-scroll gap-10 md:gap-12 hover:paused">
+                  <div className="w-full overflow-hidden tech-carousel-mask select-none bg-card p-3 md:p-4 rounded-xl border border-border mt-3 md:mt-6">
+                    <div className="flex w-max animate-marquee-scroll gap-6 md:gap-10 lg:gap-12 hover:paused">
                       {[...techIcons, ...techIcons].map((tech, i) => (
                         <div
                           key={`${tech.name}-${i}`}
-                          className="flex flex-col items-center justify-center gap-2 min-w-[56px] md:min-w-[60px] group transition-all"
+                          className="flex flex-col items-center justify-center gap-1 md:gap-2 min-w-[44px] sm:min-w-[52px] md:min-w-[60px] group transition-all"
                         >
                           <Image
                             src={tech.url}
                             alt={tech.name}
                             width={40}
                             height={40}
-                            className={`w-9 h-9 md:w-10 md:h-10 object-contain transition-all duration-300 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 ${tech.invert ? 'invert' : ''}`}
+                            className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain transition-all duration-300 opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 ${tech.invert ? 'invert' : ''}`}
                           />
-                          <span className="text-[10px] md:text-xs font-mono text-muted-foreground group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors text-center max-w-[72px] truncate">
+                          <span className="text-[9px] sm:text-[10px] md:text-xs font-mono text-muted-foreground group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors text-center max-w-[56px] sm:max-w-[64px] md:max-w-[72px] truncate">
                             {tech.name}
                           </span>
                         </div>
                       ))}
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative group order-first md:order-0">
-              <div className="absolute -inset-1 bg-linear-to-r from-emerald-500 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-              <div className="relative bg-card rounded-2xl border border-border p-2">
-                <div className="aspect-square bg-muted rounded-xl overflow-hidden relative flex items-center justify-center min-h-[280px] md:min-h-0">
-                  <Image
-                    src={personal.image}
-                    alt={personal.name}
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority
-                  />
                 </div>
               </div>
             </div>
