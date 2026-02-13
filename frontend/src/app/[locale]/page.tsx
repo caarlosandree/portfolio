@@ -7,8 +7,6 @@ import {
   Instagram,
   Linkedin,
   Mail,
-  Menu,
-  X,
   ExternalLink,
   ChevronRight,
   Code2,
@@ -17,7 +15,7 @@ import {
 } from 'lucide-react'
 import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
-import { NavLink, SectionTitle, Card } from '@/components/portfolio'
+import { NavLink, SectionTitle, Card, MobileBottomNav } from '@/components/portfolio'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import type { PersonalInfo, Experience, Education, Project } from '@/types/portfolio'
@@ -95,7 +93,6 @@ function WhatsAppIcon({ size = 24 }: { size?: number }) {
 export default function HomePage() {
   const locale = useLocale() as 'pt' | 'en' | 'es'
   const t = useTranslations()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   const personal = personalByLocale[locale] as PersonalInfo
@@ -112,10 +109,8 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev)
-
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 selection:text-emerald-200 pb-[calc(5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
       <style>{`
         @keyframes marquee-scroll {
           0% { transform: translateX(0); }
@@ -169,48 +164,16 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Mobile Menu Button - touch target 44px */}
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className="md:hidden p-3 text-foreground/80 hover:text-foreground min-h-[44px] min-w-[44px] flex items-center justify-center"
-            aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu Dropdown */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-6 shadow-2xl">
-            <div className="flex flex-col gap-1">
-              <NavLink href="#about" onClick={toggleMenu}>
-                {t('nav.about')}
-              </NavLink>
-              <NavLink href="#experience" onClick={toggleMenu}>
-                {t('nav.experience')}
-              </NavLink>
-              <NavLink href="#projects" onClick={toggleMenu}>
-                {t('nav.projects')}
-              </NavLink>
-              <NavLink href="#contact" onClick={toggleMenu}>
-                {t('nav.contact')}
-              </NavLink>
-              <ThemeToggle />
-              <LanguageSwitcher />
-              <a
-                href={personal.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={toggleMenu}
-                className="min-h-[44px] flex items-center text-emerald-600 dark:text-emerald-400 font-medium"
-              >
-                {t('nav.downloadCv')}
-              </a>
-            </div>
+          {/* Mobile: tema e idioma no header */}
+          <div className="md:hidden flex items-center gap-0">
+            <ThemeToggle />
+            <LanguageSwitcher />
           </div>
-        )}
+        </div>
       </nav>
+
+      {/* Bottom nav apenas no mobile */}
+      <MobileBottomNav />
 
       {/* Hero */}
       <section

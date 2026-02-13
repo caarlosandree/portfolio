@@ -1,6 +1,7 @@
 {
   "nav": {
     "brand": "Portfolio",
+    "home": "Home",
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
@@ -13,7 +14,8 @@
     "languageActive": "{lang} language active",
     "switchLanguage": "Switch to {lang}",
     "themeSwitchToLight": "Switch to light theme",
-    "themeSwitchToDark": "Switch to dark theme"
+    "themeSwitchToDark": "Switch to dark theme",
+    "themeSwitchToSystem": "Use device theme"
   },
   "hero": {
     "greeting": "Hi, my name is",

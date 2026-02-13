@@ -20,10 +20,10 @@ const themeScript = `
     if (raw) {
       var data = JSON.parse(raw);
       var t = data.state && data.state.theme;
-      isDark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      isDark = t === 'dark' || (t === 'system' && systemDark);
     } else {
       isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      localStorage.setItem('portfolio-theme', JSON.stringify({ state: { theme: isDark ? 'dark' : 'light' }, version: 0 }));
     }
     document.documentElement.classList.toggle('dark', isDark);
   } catch (e) {

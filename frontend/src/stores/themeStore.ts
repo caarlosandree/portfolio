@@ -3,21 +3,23 @@ import { persist } from 'zustand/middleware'
 
 export const THEME_STORAGE_KEY = 'portfolio-theme'
 
-export type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark' | 'system'
 
 interface ThemeState {
   theme: Theme
   setTheme: (theme: Theme) => void
-  toggleTheme: () => void
+  cycleTheme: () => void
 }
 
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set) => ({
-      theme: 'dark',
+      theme: 'system',
       setTheme: (theme) => set({ theme }),
-      toggleTheme: () =>
-        set((state) => ({ theme: state.theme === 'dark' ? 'light' : 'dark' })),
+      cycleTheme: () =>
+        set((state) => ({
+          theme: state.theme === 'system' ? 'light' : state.theme === 'light' ? 'dark' : 'system',
+        })),
     }),
     { name: THEME_STORAGE_KEY }
   )
