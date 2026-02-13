@@ -1,0 +1,124 @@
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log*
+
+# Build e distribuição
+.next/
+dist/
+build/
+out/
+.turbo/
+.swc/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs e Editores
+.vscode/
+.cursor/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+.sublime-workspace
+.sublime-project
+*.iml
+*.iws
+*.ipr
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VS Code específico
+.vscode-test
+.vscode/settings.json
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Cursor IDE
+.cursor/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Arquivos do sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Temporários
+tmp/
+temp/
+*.tmp
+.cache/
+
+# Testes
+coverage/
+.nyc_output/
+*.lcov
+
+# Arquivos de configuração local
+.env.local.js
+.eslintcache
+.stylelintcache
+
+# Arquivos de lock (opcional - descomente se quiser versionar)
+# package-lock.json
+# yarn.lock
+
+# Deploy
+.vercel/
+.netlify/
+.firebase/
+dist/
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# NextJS específico
+.next/
+.env.local
+.env.*.local
+out/
+
+# Arquivos gerados
+*.tsbuildinfo
+
+# Storybook
+storybook-static/

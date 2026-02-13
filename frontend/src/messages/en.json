@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "brand": "Portfolio",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume",
+    "downloadCv": "Download CV",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectLanguage": "Select language",
+    "languageActive": "{lang} language active",
+    "switchLanguage": "Switch to {lang}",
+    "themeSwitchToLight": "Switch to light theme",
+    "themeSwitchToDark": "Switch to dark theme"
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "tagline": "I create solutions with the user in mind.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A bit about my journey and favorite technologies.",
+    "paragraph1": "I started my journey in programming and technology years ago and have since worked on various projects, from support and operations to high-availability systems and SaaS products.",
+    "paragraph2": "Currently, I work as CTO and Full-Stack developer, building accessible and scalable solutions. I love solving complex problems and leading projects end-to-end.",
+    "techRecent": "Recent Technologies"
+  },
+  "experience": {
+    "title": "Professional Experience"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of the work I've developed recently.",
+    "contactMore": "Get in touch to learn more",
+    "ariaViewProject": "View project"
+  },
+  "education": {
+    "title": "Academic Background"
+  },
+  "cta": {
+    "title": "Interested in collaborating?",
+    "subtitle": "I'm always open to discussing product development and new technology opportunities.",
+    "button": "Let's talk"
+  },
+  "contact": {
+    "pretitle": "What's next?",
+    "title": "Get in Touch",
+    "subtitle": "My inbox is always open. Whether you have a question, a project opportunity, or just want to say hi, I'll do my best to get back to you!",
+    "sayHello": "Say Hello"
+  },
+  "footer": {
+    "developed": "Developed and designed by",
+    "built": "Built with Next.js, React and Tailwind CSS"
+  },
+  "aria": {
+    "email": "Email",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram"
+  },
+  "metadata": {
+    "title": "Carlos André Sabino | Full-Stack Developer and CTO",
+    "description": "Carlos André Sabino's Portfolio — Senior Full-Stack Developer and CTO. Specialist in Java, React/Next.js and software architecture. DocSend, Aurora's Aesthetic."
+  }
+}

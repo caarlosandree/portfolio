@@ -1,0 +1,16 @@
+{
+  "name": "Carlos André Sabino",
+  "role": "Desarrollador Full-Stack Senior y CTO",
+  "description": "Desarrollador Full-Stack Senior y CTO con amplia experiencia en sistemas de alta disponibilidad. Especialista en Java y ecosistema React/Next.js, lidero actualmente el desarrollo del ERP contable DocSend y sistemas de gestión para el sector de estética (Aurora's Aesthetic). Con una trayectoria de 15 años en Soporte, Operaciones y soluciones VoIP/SaaS, poseo una visión 360° de la tecnología, del código a la infraestructura en la nube. Experiencia comprobada en arquitectura de software, liderazgo de proyectos y resolución creativa de problemas con enfoque en escalabilidad.",
+  "email": "caarlosandree@gmail.com",
+  "phone": "(48) 99924-4627",
+  "city": "São José, SC",
+  "birthDate": "6 de abril de 1993",
+  "maritalStatus": "Casado",
+  "github": "https://github.com/caarlosandree",
+  "linkedin": "https://linkedin.com/in/caarlosandree",
+  "instagram": "https://www.instagram.com/carlosasab",
+  "whatsapp": "https://wa.me/5548999244627",
+  "resumeUrl": "/cv.pdf",
+  "image": "/carlos.png"
+}

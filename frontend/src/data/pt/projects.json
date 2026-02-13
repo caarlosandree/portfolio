@@ -1,0 +1,4 @@
+[
+  {"id":1,"title":"DocSend","description":"Sistema ERP voltado ao setor contábil. Arquitetura em Java 25 e Spring Boot, interface moderna em Next.js (React 19) e TypeScript com dashboards de dados complexos (Nivo). Infraestrutura em GCP, Vercel e Railway.","tags":["Java","Spring Boot","Next.js","React","TypeScript","PostgreSQL","GCP"],"image":"https://placehold.co/600x400/1e293b/34d399?text=DocSend","link":"https://docsend.com.br","github":"https://github.com/caarlosandree"},
+  {"id":2,"title":"Aurora's Aesthetic","description":"Ecossistema SaaS para gestão de clínicas de estética. Next.js 16 com React 19 e React Compiler, shadcn/ui e Tailwind. Backend Java 25 e Spring Boot, PostgreSQL 18. OpenTelemetry e Testcontainers.","tags":["Next.js","React 19","TypeScript","shadcn/ui","Java","Spring Boot","PostgreSQL"],"image":"https://placehold.co/600x400/1e293b/34d399?text=Aurora","link":"https://aurora-aesthetic.com.br","github":"https://github.com/caarlosandree"}
+]
