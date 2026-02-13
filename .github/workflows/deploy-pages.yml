@@ -18,11 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: 'true'
-      # Site de projeto: basePath = /nome-do-repo. Site de usuário (*.github.io): basePath vazio
-      NEXT_PUBLIC_BASE_PATH: ${{ contains(github.event.repository.name, '.github.io') && '' || format('/{0}', github.event.repository.name) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set base path env
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          if echo "$REPO" | grep -q '\.github\.io$'; then
+            echo "NEXT_PUBLIC_BASE_PATH=" >> "$GITHUB_ENV"
+          else
+            echo "NEXT_PUBLIC_BASE_PATH=/$REPO" >> "$GITHUB_ENV"
+          fi
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -37,7 +44,7 @@ jobs:
 
       - name: Ensure root index redirects to default locale
         run: |
-          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url='"${NEXT_PUBLIC_BASE_PATH}"'/pt/"></head><body>Redirecting…</body></html>' > frontend/out/index.html
+          printf '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=%s/pt/"></head><body>Redirecting...</body></html>' "${NEXT_PUBLIC_BASE_PATH}" > frontend/out/index.html
 
       - name: Add 404 redirect for GitHub Pages
         run: |
