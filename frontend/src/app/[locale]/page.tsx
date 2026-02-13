@@ -116,7 +116,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-500/30 selection:text-emerald-200 pb-[calc(5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-emerald-300 selection:text-emerald-950 dark:selection:bg-emerald-500/30 dark:selection:text-emerald-100 pb-[calc(5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
       <style>{`
         @keyframes marquee-scroll {
           0% { transform: translateX(0); }
