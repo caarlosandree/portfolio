@@ -1,4 +1,31 @@
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from 'next/font/google'
+
+export const metadata: Metadata = {
+  applicationName: "Carlos André Sabino Portfolio",
+  title: {
+    default: "Carlos André Sabino - Portfolio",
+    template: "%s | Carlos André Sabino",
+  },
+  description: "Portfólio interativo e moderno de Carlos André Sabino - Desenvolvedor Full-Stack Senior e CTO.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Portfolio",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    shortcut: "/favicon.ico",
+    apple: "/icons/apple-touch-icon.png",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
 import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 
