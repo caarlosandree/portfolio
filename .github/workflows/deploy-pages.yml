@@ -18,7 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: 'true'
-      NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+      # Site de projeto: basePath = /nome-do-repo. Site de usuário (*.github.io): basePath vazio
+      NEXT_PUBLIC_BASE_PATH: ${{ contains(github.event.repository.name, '.github.io') && '' || format('/{0}', github.event.repository.name) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,6 +38,19 @@ jobs:
       - name: Build
         working-directory: frontend
         run: npm run build
+
+      - name: Add 404 redirect for GitHub Pages
+        run: |
+          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./"></head><body>Redirecting…</body></html>' > frontend/out/404.html
+
+      - name: Show Pages URL
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          if echo "$REPO" | grep -q '\.github\.io$'; then
+            echo "::notice:: URL (site de usuário): https://${{ github.repository_owner }}.github.io/"
+          else
+            echo "::notice:: URL (site de projeto, use a barra no final): https://${{ github.repository_owner }}.github.io/$REPO/"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
