@@ -35,6 +35,10 @@ jobs:
         working-directory: frontend
         run: bun run build
 
+      - name: Ensure root index redirects to default locale
+        run: |
+          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${NEXT_PUBLIC_BASE_PATH}/pt/"></head><body>Redirecting…</body></html>' > frontend/out/index.html
+
       - name: Add 404 redirect for GitHub Pages
         run: |
           echo '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./"></head><body>Redirecting…</body></html>' > frontend/out/404.html
