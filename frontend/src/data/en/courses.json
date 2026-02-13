@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Artificial Intelligence and Cloud (AWS)",
+    "institution": "Amazon Web Services",
+    "period": "Prompt Engineering, LLMs, Amazon Bedrock, NoSQL, Cloud Solutions"
+  },
+  {
+    "id": 2,
+    "name": "Java Career",
+    "institution": "Alura",
+    "period": "Full track: OOP, Collections, exceptions, Spring Boot and REST APIs"
+  },
+  {
+    "id": 3,
+    "name": "Database Career Track",
+    "institution": "Alura",
+    "period": "PostgreSQL, MySQL, Oracle Database, SQL Server, DB2"
+  },
+  {
+    "id": 4,
+    "name": "Google Cloud Platform (GCP)",
+    "institution": "Google",
+    "period": "Infrastructure, VMs, cloud networking and storage"
+  },
+  {
+    "id": 5,
+    "name": "Microsoft Azure",
+    "institution": "Microsoft",
+    "period": "Resource administration, compute, security and governance"
+  },
+  {
+    "id": 6,
+    "name": "Microsoft Power BI",
+    "institution": "Alura",
+    "period": "Data Analysis: modeling, preparation and visualization"
+  },
+  {
+    "id": 7,
+    "name": "Python 3",
+    "institution": "Alura",
+    "period": "Fundamentals, control structures and composite structures"
+  },
+  {
+    "id": 8,
+    "name": "JavaScript and Web",
+    "institution": "Alura",
+    "period": "Web development (HTML5, CSS3) and JavaScript"
+  },
+  {
+    "id": 9,
+    "name": "AngularJS",
+    "institution": "Unicamp",
+    "period": "Web development with AngularJS framework"
+  },
+  {
+    "id": 10,
+    "name": "Programming Logic",
+    "institution": "Alura",
+    "period": "Commands, conditionals, loops, composite variables and routines"
+  },
+  {
+    "id": 11,
+    "name": "Git and GitHub",
+    "institution": "Alura",
+    "period": "Version control and code collaboration"
+  },
+  {
+    "id": 12,
+    "name": "Best Practices",
+    "institution": "Alura",
+    "period": "Software development"
+  },
+  {
+    "id": 13,
+    "name": "NoSQL Databases",
+    "institution": "AWS",
+    "period": "Modern, scalable applications with non-relational databases"
+  },
+  {
+    "id": 14,
+    "name": "TOTVS Protheus",
+    "institution": "TOTVS",
+    "period": "ERP infrastructure and ADVPL programming"
+  },
+  {
+    "id": 15,
+    "name": "IP Telephony and VoIP",
+    "institution": "Specialization",
+    "period": "PABX maintenance, IP telephony security and VoIP"
+  },
+  {
+    "id": 16,
+    "name": "LGPD (Data Protection Law)",
+    "institution": "Training",
+    "period": "Brazilian General Data Protection Law"
+  },
+  {
+    "id": 17,
+    "name": "Negotiation",
+    "institution": "Microlins",
+    "period": "Negotiation techniques"
+  }
+]

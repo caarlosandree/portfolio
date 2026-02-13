@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Inteligência Artificial e Cloud (AWS)",
+    "institution": "Amazon Web Services",
+    "period": "Prompt Engineering, LLMs, Amazon Bedrock, NoSQL, Soluções em Nuvem"
+  },
+  {
+    "id": 2,
+    "name": "Carreira Java",
+    "institution": "Alura",
+    "period": "Formação completa: OOP, Collections, exceções, Spring Boot e APIs REST"
+  },
+  {
+    "id": 3,
+    "name": "Formação Carreira em Banco de Dados",
+    "institution": "Alura",
+    "period": "PostgreSQL, MySQL, Oracle Database, SQL Server, DB2"
+  },
+  {
+    "id": 4,
+    "name": "Google Cloud Platform (GCP)",
+    "institution": "Google",
+    "period": "Infraestrutura, VMs, redes em nuvem e armazenamento"
+  },
+  {
+    "id": 5,
+    "name": "Microsoft Azure",
+    "institution": "Microsoft",
+    "period": "Administração de recursos, computação, segurança e governança"
+  },
+  {
+    "id": 6,
+    "name": "Microsoft Power BI",
+    "institution": "Alura",
+    "period": "Análise de Dados: modelagem, preparação e visualização"
+  },
+  {
+    "id": 7,
+    "name": "Python 3",
+    "institution": "Alura",
+    "period": "Fundamentos, estruturas de controle e estruturas compostas"
+  },
+  {
+    "id": 8,
+    "name": "JavaScript e Web",
+    "institution": "Alura",
+    "period": "Desenvolvimento Web (HTML5, CSS3) e JavaScript"
+  },
+  {
+    "id": 9,
+    "name": "AngularJS",
+    "institution": "Unicamp",
+    "period": "Desenvolvimento web com framework AngularJS"
+  },
+  {
+    "id": 10,
+    "name": "Lógica de Programação",
+    "institution": "Alura",
+    "period": "Comandos, condicionais, repetições, variáveis compostas e rotinas"
+  },
+  {
+    "id": 11,
+    "name": "Git e GitHub",
+    "institution": "Alura",
+    "period": "Controle de versionamento e colaboração de código"
+  },
+  {
+    "id": 12,
+    "name": "Boas Práticas",
+    "institution": "Alura",
+    "period": "Desenvolvimento de software"
+  },
+  {
+    "id": 13,
+    "name": "Bancos de Dados NoSQL",
+    "institution": "AWS",
+    "period": "Aplicações modernas e escaláveis com bases não relacionais"
+  },
+  {
+    "id": 14,
+    "name": "TOTVS Protheus",
+    "institution": "TOTVS",
+    "period": "Infraestrutura do ERP e programação ADVPL"
+  },
+  {
+    "id": 15,
+    "name": "Telefonia IP e VoIP",
+    "institution": "Especialização",
+    "period": "Manutenção de PABX, segurança em telefonia IP e VoIP"
+  },
+  {
+    "id": 16,
+    "name": "LGPD",
+    "institution": "Treinamento",
+    "period": "Lei Geral de Proteção de Dados"
+  },
+  {
+    "id": 17,
+    "name": "Negociação",
+    "institution": "Microlins",
+    "period": "Técnicas de negociação"
+  }
+]

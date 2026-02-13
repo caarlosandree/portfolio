@@ -4,6 +4,7 @@
     "home": "Home",
     "about": "About",
     "experience": "Experience",
+    "courses": "Courses",
     "projects": "Projects",
     "contact": "Contact",
     "resume": "Resume",
@@ -41,6 +42,10 @@
   },
   "education": {
     "title": "Academic Background"
+  },
+  "courses": {
+    "title": "Courses and Training",
+    "subtitle": "Courses and training I have completed throughout my career."
   },
   "cta": {
     "title": "Interested in collaborating?",

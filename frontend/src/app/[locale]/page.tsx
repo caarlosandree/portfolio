@@ -12,13 +12,14 @@ import {
   Code2,
   Briefcase,
   GraduationCap,
+  BookOpen,
 } from 'lucide-react'
 import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
 import { NavLink, SectionTitle, Card, MobileBottomNav } from '@/components/portfolio'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import type { PersonalInfo, Experience, Education, Project } from '@/types/portfolio'
+import type { PersonalInfo, Experience, Education, Course, Project } from '@/types/portfolio'
 import personalPt from '@/data/pt/personal.json'
 import personalEn from '@/data/en/personal.json'
 import personalEs from '@/data/es/personal.json'
@@ -34,12 +35,16 @@ import educationEs from '@/data/es/education.json'
 import projectsPt from '@/data/pt/projects.json'
 import projectsEn from '@/data/en/projects.json'
 import projectsEs from '@/data/es/projects.json'
+import coursesPt from '@/data/pt/courses.json'
+import coursesEn from '@/data/en/courses.json'
+import coursesEs from '@/data/es/courses.json'
 
 const personalByLocale = { pt: personalPt, en: personalEn, es: personalEs }
 const skillsByLocale = { pt: skillsPt, en: skillsEn, es: skillsEs } as Record<string, string[]>
 const experiencesByLocale = { pt: experiencesPt, en: experiencesEn, es: experiencesEs } as Record<string, Experience[]>
 const educationByLocale = { pt: educationPt, en: educationEn, es: educationEs } as Record<string, Education[]>
 const projectsByLocale = { pt: projectsPt, en: projectsEn, es: projectsEs } as Record<string, Project[]>
+const coursesByLocale = { pt: coursesPt, en: coursesEn, es: coursesEs } as Record<string, Course[]>
 
 const DEVICON_BASE = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons'
 const FALLBACK_ICON = `${DEVICON_BASE}/devicon/devicon-original.svg`
@@ -99,6 +104,7 @@ export default function HomePage() {
   const skills = skillsByLocale[locale] ?? skillsByLocale.pt
   const experiences = experiencesByLocale[locale] ?? experiencesByLocale.pt
   const education = educationByLocale[locale] ?? educationByLocale.pt
+  const courses = coursesByLocale[locale] ?? coursesByLocale.pt
   const projects = projectsByLocale[locale] ?? projectsByLocale.pt
 
   useEffect(() => {
@@ -150,6 +156,7 @@ export default function HomePage() {
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <NavLink href="#about">{t('nav.about')}</NavLink>
             <NavLink href="#experience">{t('nav.experience')}</NavLink>
+            <NavLink href="#courses">{t('nav.courses')}</NavLink>
             <NavLink href="#projects">{t('nav.projects')}</NavLink>
             <NavLink href="#contact">{t('nav.contact')}</NavLink>
             <ThemeToggle />
@@ -314,6 +321,40 @@ export default function HomePage() {
                   {exp.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section
+        id="courses"
+        className="py-16 md:py-20 container mx-auto px-4 sm:px-6 scroll-mt-20"
+      >
+        <div>
+          <SectionTitle subtitle={t('courses.subtitle')}>
+            {t('courses.title')}
+          </SectionTitle>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-10">
+            {courses.map((course) => (
+              <Card key={course.id} className="p-4 md:p-5 flex flex-col">
+                <div className="flex items-start gap-3">
+                  <BookOpen className="h-5 w-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                  <div className="min-w-0">
+                    <h3 className="text-base font-bold text-foreground md:text-lg">
+                      {course.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {course.institution}
+                    </p>
+                    {course.period && (
+                      <p className="text-xs text-emerald-600 dark:text-emerald-500/80 font-mono mt-2 md:text-sm">
+                        {course.period}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </Card>
             ))}
           </div>
         </div>

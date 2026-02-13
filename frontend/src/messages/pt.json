@@ -4,6 +4,7 @@
     "home": "Início",
     "about": "Sobre",
     "experience": "Experiência",
+    "courses": "Cursos",
     "projects": "Projetos",
     "contact": "Contato",
     "resume": "Currículo",
@@ -41,6 +42,10 @@
   },
   "education": {
     "title": "Formação Acadêmica"
+  },
+  "courses": {
+    "title": "Cursos e Formações",
+    "subtitle": "Cursos e treinamentos que realizei ao longo da carreira."
   },
   "cta": {
     "title": "Interessado em colaborar?",

@@ -1,6 +1,6 @@
 'use client'
 
-import { Home, User, Briefcase, FolderKanban, Mail } from 'lucide-react'
+import { Home, User, Briefcase, BookOpen, FolderKanban, Mail } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
@@ -8,6 +8,7 @@ const navItems = [
   { href: '#home', icon: Home, key: 'home' as const },
   { href: '#about', icon: User, key: 'about' as const },
   { href: '#experience', icon: Briefcase, key: 'experience' as const },
+  { href: '#courses', icon: BookOpen, key: 'courses' as const },
   { href: '#projects', icon: FolderKanban, key: 'projects' as const },
   { href: '#contact', icon: Mail, key: 'contact' as const },
 ] as const
