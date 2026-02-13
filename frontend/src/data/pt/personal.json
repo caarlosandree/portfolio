@@ -1,1 +1,16 @@
-{"name":"Carlos André Sabino","role":"Desenvolvedor Full-Stack Senior e CTO","description":"Com 15 anos de trajetória em Suporte, Operações e soluções VoIP/SaaS, uno a visão de infraestrutura à agilidade do desenvolvimento moderno. Atualmente, atuo como CTO e Desenvolvedor Full-Stack, liderando a arquitetura do ERP contábil DocSend e do sistema Aurora's Aesthetic. Especialista no ecossistema Java e React/Next.js, foco na construção de sistemas de alta disponibilidade, aplicando uma visão 360º que vai do código à nuvem para garantir escalabilidade e performance.","email":"caarlosandree@gmail.com","phone":"(48) 99924-4627","city":"São José, SC","birthDate":"6 de abril de 1993","maritalStatus":"Casado","github":"https://github.com/caarlosandree","linkedin":"https://linkedin.com/in/caarlosandree","instagram":"https://www.instagram.com/carlosasab","whatsapp":"https://wa.me/5548999244627","resumeUrl":"/cv.pdf","image":"/carlos.png"}
+{
+  "name": "Carlos André Sabino",
+  "role": "Desenvolvedor Full-Stack Senior e CTO",
+  "description": "Com 15 anos de trajetória em Suporte, Operações e soluções VoIP/SaaS, uno a visão de infraestrutura à agilidade do desenvolvimento moderno. Atualmente, atuo como CTO e Desenvolvedor Full-Stack, liderando a arquitetura do ERP contábil DocSend e do sistema Aurora's Aesthetic. Especialista no ecossistema Java e React/Next.js, foco na construção de sistemas de alta disponibilidade, aplicando uma visão 360º que vai do código à nuvem para garantir escalabilidade e performance.",
+  "email": "caarlosandree@gmail.com",
+  "phone": "(48) 99924-4627",
+  "city": "São José, SC",
+  "birthDate": "6 de abril de 1993",
+  "maritalStatus": "Casado",
+  "github": "https://github.com/caarlosandree",
+  "linkedin": "https://linkedin.com/in/caarlosandree",
+  "instagram": "https://www.instagram.com/carlosasab",
+  "whatsapp": "https://wa.me/5548999244627",
+  "resumeUrl": "/cv.pdf",
+  "image": "/carlos.png"
+}
